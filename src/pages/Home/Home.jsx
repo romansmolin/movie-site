@@ -1,10 +1,9 @@
 import { useEffect, useState } from "react";
 import { SliderCarusel } from "../../components/SliderCarusel/SliderCarusel";
 import { MovieAndTVGrid } from "../../components/MovieAndTVGrid/MovieAndTVGrid";
-import { OnTheAirMovieList } from "../../components/OnTheAirMovieList/OnTheAirMovieList/OnTheAirMovieList";
+import { TitlesScrollSection } from "../../components/TitlesScrollSection/TitlesScrollSection.jsx";
 
 import tmdbApi, { movieType } from "../../api/tmdbApi";
-import apiConfig from "../../api/apiConfig";
 
 export const Home = () => {
   const [sliderData, setSliderData] = useState([]);
@@ -29,7 +28,9 @@ export const Home = () => {
         <SliderCarusel sliderImages={sliderData} />
         <MovieAndTVGrid />
       </div>
-      <OnTheAirMovieList />
+      <TitlesScrollSection type={'upcoming'} title='New Movies Coming Soon' category="movies" />
+      <TitlesScrollSection type={'on_the_air'} title='On The Air Tv Shows' category="tv-series" />
+
     </>
   );
 };

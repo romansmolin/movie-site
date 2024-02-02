@@ -1,0 +1,38 @@
+.shady-transition::before {
+  content: '';
+  position: absolute; /* Change from absolute to fixed */
+  top: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.4), transparent); /* Adjust the shadow color and opacity as needed */
+  pointer-events: none;
+  z-index: 10;
+  width: 153px;
+  border-radius: 1rem;
+  display: none;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 12px; /* or less, depending on the desired effect */
+}
+
+.custom-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Track color */
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #888; /* Thumb color */
+  border-radius: 10px;
+}
+
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb hover color */
+}
+
+@media (min-width: 390px) and (max-width: 768px) {
+    .shady-transition::before {
+        display: block;
+        width: 100px;
+    }
+}

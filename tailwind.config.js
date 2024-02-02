@@ -7,6 +7,7 @@ export default {
   theme: {
     extend: {
       screens: {
+        '2sm': '390px',
         '3xl': '1600px', // Customize the pixel value as needed
       },
     },
