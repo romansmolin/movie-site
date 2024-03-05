@@ -20,7 +20,7 @@ export const SliderCarusel = ({ sliderImages }) => {
     };
 
     return (
-        <div className='max-w-[1200px] w-full h-[470px] lg:h-[550px] lg:w-[850px] relative rounded-2xl group'>
+        <div className=' w-full h-[470px] lg:h-[550px] relative rounded-2xl group'>
             <div
                 style={{ backgroundImage: `url(${currentImage})` }}
                 className='w-full h-full rounded-2xl bg-center bg-cover duration-500 relative'
@@ -52,6 +52,7 @@ export const SliderCarusel = ({ sliderImages }) => {
                 {sliderImages.map((item, idx) => (
                     <div className=''>
                         <Icon
+                            key={idx}
                             icon="mdi:dot"
                             width={currentIndex === idx ? '32px' : '24px'}
                             height={currentIndex === idx ? '32px' : '24px'}

@@ -8,6 +8,7 @@ export const Header = () => {
 
   return (
     <div
+      id="header"
       className={cn(
         `sticky inset-x-0 top-0 z-30 w-full transition-all border-b border-gray-200`,
         {
